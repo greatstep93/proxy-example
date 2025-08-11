@@ -11,6 +11,7 @@ public class ProxyExampleApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(ProxyExampleApplication.class, args);
+
         JdkProxyService jdkProxyService = ctx.getBean(JdkProxyService.class);
         System.out.println("Bean class: " + jdkProxyService.getClass().getName());
         System.out.println("Result: " + jdkProxyService.operation());

@@ -13,7 +13,7 @@ public class LoggingProxy {
 
     @Bean // Создает бин, управляемый Spring-контейнером
     @Primary // Помечает этот бин как основной при внедрении интерфейса Service
-    public JdkProxyService serviceProxy(JdkProxyJdkProxyServiceImpl jdkProxyServiceImpl) {
+    public JdkProxyService serviceProxy(JdkProxyServiceImpl jdkProxyServiceImpl) {
         // Создание JDK динамического прокси для интерфейса Service
         return (JdkProxyService) Proxy.newProxyInstance(
                 JdkProxyService.class.getClassLoader(), // 1. Загрузчик классов интерфейса
